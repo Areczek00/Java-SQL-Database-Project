@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="682.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.projekt_biblioteka.ReturningController">
+   <children>
+      <TextArea fx:id="resultText" editable="false" layoutX="-2.0" layoutY="314.0" prefHeight="370.0" prefWidth="640.0" promptText="Rezultat zapytania">
+         <font>
+            <Font name="Palatino Linotype" size="15.0" />
+         </font>
+      </TextArea>
+      <TextField fx:id="id_zadl" alignment="CENTER" layoutX="80.0" layoutY="220.0" onAction="#zadluzenie" promptText="id użytkownika">
+         <font>
+            <Font name="Palatino Linotype" size="12.0" />
+         </font></TextField>
+      <Text fill="#760f90" layoutX="33.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Informacje do oddania:" textAlignment="CENTER" wrappingWidth="242.13671875">
+         <font>
+            <Font name="Palatino Linotype" size="14.0" />
+         </font>
+      </Text>
+      <TextField fx:id="id_user" layoutX="61.0" layoutY="45.0" prefHeight="25.0" prefWidth="186.0" promptText="id użytkownika">
+         <font>
+            <Font name="Palatino Linotype" size="12.0" />
+         </font></TextField>
+      <TextField fx:id="id_pos" layoutX="61.0" layoutY="78.0" prefHeight="25.0" prefWidth="186.0" promptText="id pozycji">
+         <font>
+            <Font name="Palatino Linotype" size="12.0" />
+         </font></TextField>
+      <Text fill="#760f90" layoutX="33.0" layoutY="204.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Informacje o zadłużeniu użytkownika:" textAlignment="CENTER" wrappingWidth="242.13671875">
+         <font>
+            <Font name="Palatino Linotype" size="14.0" />
+         </font>
+      </Text>
+      <Button fx:id="CheckUserDebt" layoutX="124.0" layoutY="258.0" mnemonicParsing="false" onAction="#zadluzenie" text="Sprawdź">
+         <font>
+            <Font name="Palatino Linotype" size="12.0" />
+         </font></Button>
+      <Button fx:id="Returning" layoutX="130.0" layoutY="152.0" mnemonicParsing="false" onAction="#oddawanie" text="Oddaj">
+         <font>
+            <Font name="Palatino Linotype" size="12.0" />
+         </font></Button>
+      <Text fill="#760f90" layoutX="364.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Informacje do przedłużenia:" textAlignment="CENTER" wrappingWidth="242.13671875">
+         <font>
+            <Font name="Palatino Linotype" size="14.0" />
+         </font>
+      </Text>
+      <TextField fx:id="id_user_ex" layoutX="392.0" layoutY="45.0" prefHeight="25.0" prefWidth="186.0" promptText="id użytkownika">
+         <font>
+            <Font name="Palatino Linotype" size="12.0" />
+         </font></TextField>
+      <TextField fx:id="id_pos_ex" layoutX="392.0" layoutY="78.0" prefHeight="25.0" prefWidth="186.0" promptText="id pozycji">
+         <font>
+            <Font name="Palatino Linotype" size="12.0" />
+         </font></TextField>
+      <Button fx:id="Extending" layoutX="454.0" layoutY="115.0" mnemonicParsing="false" onAction="#przedluzenie" text="Przedłuż">
+         <font>
+            <Font name="Palatino Linotype" size="12.0" />
+         </font></Button>
+      <TextField fx:id="data_oddania" layoutX="62.0" layoutY="115.0" prefHeight="25.0" prefWidth="186.0" promptText="data oddania [dd-mm-yyyy]">
+         <font>
+            <Font name="Palatino Linotype" size="12.0" />
+         </font></TextField>
+      <Text fill="#760f90" layoutX="373.0" layoutY="204.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Informacje o pożyczonych książkach:" textAlignment="CENTER" wrappingWidth="242.13671875">
+         <font>
+            <Font name="Palatino Linotype" size="14.0" />
+         </font>
+      </Text>
+      <Button fx:id="CheckUsers" layoutX="464.0" layoutY="220.0" mnemonicParsing="false" onAction="#czytelnicy" text="Sprawdź">
+         <font>
+            <Font name="Palatino Linotype" size="12.0" />
+         </font></Button>
+   </children>
+</AnchorPane>

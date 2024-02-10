@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="682.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.projekt_biblioteka.BasicSelects">
+   <children>
+      <BorderPane prefHeight="26.0" prefWidth="640.0">
+         <bottom>
+            <MenuBar BorderPane.alignment="CENTER">
+              <menus>
+                <Menu mnemonicParsing="false" text="Operacje">
+                  <items>
+                    <MenuItem fx:id="wypozyczPozycje" mnemonicParsing="false" onAction="#wypozyczanieMenu" text="Wypożycz" />
+                        <MenuItem fx:id="oddajPozycje" mnemonicParsing="false" onAction="#oddawanieMenu" text="Oddawanie" />
+                        <MenuItem fx:id="edycjaUzytkownikow" mnemonicParsing="false" onAction="#uzytkownicyMenu" text="Użytkownicy" />
+                        <MenuItem fx:id="ranks" mnemonicParsing="false" onAction="#rankMenu" text="Rankingi" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+         </bottom>
+      </BorderPane>
+      <TextArea fx:id="resultText" editable="false" layoutX="-2.0" layoutY="314.0" prefHeight="370.0" prefWidth="640.0" promptText="Rezultat zapytania">
+         <font>
+            <Font name="Palatino Linotype" size="15.0" />
+         </font></TextArea>
+      <VBox fx:id="selectBox" layoutX="526.0" layoutY="34.0" prefHeight="200.0" prefWidth="100.0">
+         <children>
+            <Button fx:id="autorzyTable" mnemonicParsing="false" onMouseClicked="#onAutorzyClick" text="Autorzy" />
+            <Button fx:id="czytelnicyTable" mnemonicParsing="false" onMouseClicked="#onCzytelnicyClick" text="Czytelnicy" />
+            <Button fx:id="kategoriaTable" mnemonicParsing="false" onMouseClicked="#onKategoriaClick" text="Kategorie" />
+            <Button fx:id="ksiazkiTable" mnemonicParsing="false" onMouseClicked="#onKsiazkiClick" text="Ksiazki" />
+            <Button fx:id="wydawnictwaTable" mnemonicParsing="false" onMouseClicked="#onWydawnictwaClick" text="Wydawnictwa" />
+            <Button fx:id="wypozyczeniaTable" mnemonicParsing="false" onMouseClicked="#onWypozyczeniaClick" text="Wypozyczenia" />
+            <Button fx:id="pozycjaTable" mnemonicParsing="false" onMouseClicked="#onPozycjaClick" text="Pozycje" />
+         </children>
+      </VBox>
+      <Text fill="#760f90" layoutX="14.0" layoutY="129.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kliknij, aby wyświetlić podstawowe tabele bazy danych." textAlignment="CENTER" wrappingWidth="470.13671875">
+         <font>
+            <Font name="Palatino Linotype" size="18.0" />
+         </font>
+      </Text>
+      <Button fx:id="resetButton" layoutX="100.0" layoutY="159.0" mnemonicParsing="false" onAction="#reset" prefHeight="75.0" prefWidth="298.0" style="-fx-background-color: cyan; -fx-border-color: gray;" text="ZRESTARTUJ BAZĘ DANYCH" textAlignment="CENTER" textFill="#d70cc9">
+         <font>
+            <Font name="Palatino Linotype" size="18.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
